@@ -1,0 +1,20 @@
+
+spring:
+  application:
+    name: jev-spring-boot
+
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: false
+
+server:
+  port: ${SERVER_PORT:8080}
+  shutdown: graceful
+
+jev:
+  base-url: ${JEV_BASE_URL:https://api.typesafe.ai}
+  api-key: ${TYPESAFE_API_KEY:}
+  model: ${JEV_MODEL:typesafe/jev-1.13}
+  connect-timeout: 3s
+  read-timeout: 30s
+  max-attempts: 3
